@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        #contenedor1{
+            position: absolute;
+            left: 67px;
+            top: 177px;
+            width: 408px;
+            height: 298px;
+            z-index: 1;
+        }
+        #contenedor2{
+            position: absolute;
+            left: 510px;
+            top: 176px;
+            width: 443px;
+            height: 297px;
+            z-index: 2;
+        }
+        ul{
+            list-style: none;
+        }
+        li{
+            margin: 10px 0;
+            font-size: 24px;
+            width: 95px;
+        }
+        .destacar{
+            background-color: #F00;
+            color: #FFF;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+        $(document).ready (function() {
+            //creamos un array con el metodo queryselectorAll, y recogera todos los li
+            var elementos=document.querySelectorAll("li");
+            //recorremos los elementos
+            for(var i=0;i<elementos.length;i++){
+
+                //lo ponemos a la escucha al pasar el ratón por encima, y llamara a la función pon_imagen
+                elementos[i].addEventListener("mouseover",pon_imagen,false);
+                //lo ponemos a la escucha al quitar el ratón de encima y llama a la función quita_imagen
+                elementos[i].addEventListener("mouseout",quita_imagen,false);
+            }
+              
+    });
+
+            //creamos las funciones
+
+            function pon_imagen(e){
+                //si el evento picado es elem1
+                if(e.target==elem1){
+                    //añade la clase destacar a elem1
+                    $("#elem1").addClass("destacar");
+                    //saldrá una imágen a la derecha
+                    $("img").attr("src", "imgs/img1.jpg");
+                }else if(e.target==elem2){
+                    //añade la clase destacar a elem1
+                    $("#elem2").addClass("destacar");
+                    //saldrá una imágen a la derecha
+                    $("img").attr("src", "imgs/img2.jpg");
+
+                }else if(e.target==elem3){
+                    //añade la clase destacar a elem1
+                    $("#elem3").addClass("destacar");
+                    //saldrá una imágen a la derecha
+                    $("img").attr("src", "imgs/img3.jpg");
+            }else if(e.target==elem4){
+                    //añade la clase destacar a elem1
+                    $("#elem4").addClass("destacar");
+                    //saldrá una imágen a la derecha
+                    $("img").attr("src", "imgs/img4.jpg");
+            }
+        }
+
+        function quita_imagen(e){
+
+            if(e.target==elem1){
+                //elimina la clase css destacar
+                $("#elem1").removeClass("destacar");
+                //elimina la imagen
+                $("img").removeAttr("src");
+            }else if(e.target==elem2){
+                $("#elem2").removeClass("destacar");
+                //elimina la imagen
+                $("img").removeAttr("src");
+            }else if(e.target==elem3){
+                $("#elem3").removeClass("destacar");
+                //elimina la imagen
+                $("img").removeAttr("src");
+            }else if(e.target==elem4){
+                $("#elem4").removeClass("destacar");
+                //elimina la imagen
+                $("img").removeAttr("src");
+            }
+        }
+    
+    
+    </script>
+</head>
+<body>
+    <div id="contenedor1">
+        <ul>
+            <li id="elem1"> Imagen 1 </li>
+            <li id="elem2"> Imagen 2 </li>
+            <li id="elem3"> Imagen 3 </li>
+            <li id="elem4"> Imagen 4 </li>
+        </ul>
+    </div>
+    <div id="contenedor2">
+        <img src="" >
+    </div>
+    
+</body>
+</html>

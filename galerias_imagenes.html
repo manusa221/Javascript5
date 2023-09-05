@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            text-align: center;
+            width: 50%;
+            border: none;
+            margin: auto;
+        }
+
+        img{
+            padding:0 5px; 
+            width: 250px;
+            height: 250px;
+        }
+        h1{
+            text-align: center;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+
+            var imagenes;
+            imagenes=document.querySelectorAll ("img");
+
+            for(var i=0;i<imagenes.length;i++){
+
+                imagenes[i].addEventListener("mouseover",cambiar,false);
+                imagenes[i].addEventListener("mouseout",restaurar,false);
+            }
+       
+        });
+
+        function cambiar(e){
+
+            if(e.target==img1){
+                $("#img1").attr("src", "imgs/img1.jpg");
+
+            }else if(e.target==img2){
+                
+                $("#img2").attr("src", "imgs/img2.jpg");
+
+            }else if(e.target==img3){
+                
+                $("#img3").attr("src", "imgs/img3.jpg");
+           
+            }else if(e.target==img4){
+                
+                $("#img4").attr("src", "imgs/img4.jpg");
+            }
+           
+
+        }
+        function restaurar(e){
+
+if(e.target==img1){
+    $("#img1").attr("src", "imgs/imgs2/img1.jpg");
+
+}else if(e.target==img2){
+    
+    $("#img2").attr("src", "imgs/imgs2/img2.jpg");
+
+}else if(e.target==img3){
+    
+    $("#img3").attr("src", "imgs/imgs2/img3.jpg");
+
+}else if(e.target==img4){
+    
+    $("#img4").attr("src", "imgs/imgs2/img4.jpg");
+}
+
+
+}
+        
+    </script>
+</head>
+<body>
+    <h1>Galería de imágenes</h1>
+    <table width="100%" border="0">
+        <tr>
+            <td><img src="imgs/imgs2/img1.jpg" id="img1"></td>
+            <td><img src="imgs/imgs2/img2.jpg" id="img2"></td>
+            <td><img src="imgs/imgs2/img3.jpg" id="img3"></td>
+            <td><img src="imgs/imgs2/img4.jpg" id="img4"></td>
+        </tr>
+    </table>
+    
+</body>

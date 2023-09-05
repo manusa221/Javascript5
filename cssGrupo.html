@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      h1 {
+        text-align: center;
+      }
+      div {
+        width: 20%;
+        margin: 0 100px;
+        float: left;
+        border: #f00 solid 2px;
+        padding: 10px;
+      }
+      table {
+        width: 100%;
+        margin-top: 10px;
+      }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    ">
+
+    <script>
+      $(document).ready(function () {
+        //creamos una variable donde almacenamos todos los botones, creamos un array con la función queryselectorAll
+        var botones=document.querySelectorAll("input");
+
+        //recorremos el array con un bucle for
+        for(var i=0;i<botones.length;i++){
+
+          botones[i].addEventListener("click",modo_lectura,false);
+        
+        }
+        
+       
+      });
+      //le pasamos como argumento la e para que recoja el evento que esta realizando al pulsar click
+      function modo_lectura(e) {
+        //creamos una variable para almacenar donde tiene actuar el evento aumentar
+        var zonaActuacion;
+
+        if(e.target==m_lectura1){
+          zonaActuacion="#noticia1";
+        }else if(e.target==m_lectura2){
+          zonaActuacion="#noticia2";
+        }else if(e.target==m_lectura3){
+          zonaActuacion="#noticia3";
+        }
+        //guardamos en la variable la propiedad css en bloque
+        var tamDefecto = $(zonaActuacion).css({"background-color" : "#000" , 
+                                              "font-size" : "20px" , 
+                                              "text-align" : "justify" , 
+                                              "color" : "#FFF"});
+
+        tamDefecto = parseInt(tamDefecto); //pasamos la variable a entero para modificar el tamaño
+        //detectamos la noticia1 y luego aumentamos la fuente
+        $(zonaActuacion).css("font-size", tamDefecto * 1.05);
+      }
+      
+      
+      
+    </script>
+  </head>
+  <body>
+    <h1>NOTICIAS</h1>
+    <div id="noticia1">
+      " Lorem ipsum dolor sit amet consectetur adipiscing, elit dignissim
+      interdum morbi sem, senectus pulvinar tortor a dis. Ad nulla et interdum
+      hendrerit mattis, ornare semper convallis vel primis vehicula, per mauris
+      volutpat tempor. Lacus ultrices sem nisi et dui in ad eget lacinia, montes
+      proin cubilia elementum fusce torquent lobortis. Magna et fermentum netus
+      montes per gravida quis turpis duis elementum, sociosqu pharetra luctus
+      tortor blandit metus tristique semper fringilla, ultricies vitae pulvinar
+      morbi molestie himenaeos rutrum tellus tempus. Nam eleifend posuere
+      aliquam neque mattis tellus viverra pretium eget consequat pellentesque
+      commodo tempus congue cursus, mus proin varius lectus primis vehicula sem
+      dictum ornare tempor lacus at magna. Facilisi fames volutpat nunc primis
+      ultrices litora bibendum, justo luctus natoque cubilia ac nulla vivamus,
+      dapibus quam risus facilisis est quis."
+
+      <table>
+        <tr>
+          <td style="text-align: center">
+            <input type="button" value="Modo lectura" id="m_lectura1" />
+          </td>
+      </table>
+    </div>
+
+    <div id="noticia2">
+      "Lorem ipsum dolor sit amet consectetur adipiscing, elit dignissim
+      interdum morbi sem, senectus pulvinar tortor a dis. Ad nulla et interdum
+      hendrerit mattis, ornare semper convallis vel primis vehicula, per mauris
+      volutpat tempor. Lacus ultrices sem nisi et dui in ad eget lacinia, montes
+      proin cubilia elementum fusce torquent lobortis. Magna et fermentum netus
+      montes per gravida quis turpis duis elementum, sociosqu pharetra luctus
+      tortor blandit metus tristique semper fringilla, ultricies vitae pulvinar
+      morbi molestie himenaeos rutrum tellus tempus. Nam eleifend posuere
+      aliquam neque mattis tellus viverra pretium eget consequat pellentesque
+      commodo tempus congue cursus, mus proin varius lectus primis vehicula sem
+      dictum ornare tempor lacus at magna. Facilisi fames volutpat nunc primis
+      ultrices litora bibendum, justo luctus natoque cubilia ac nulla vivamus,
+      dapibus quam risus facilisis est quis. "
+      <table>
+        <tr>
+          <td style="text-align: center">
+            <input type="button" value="Modo lectura" id="m_lectura2" />
+          </td>
+      </table>
+    </div>
+
+    <div id="noticia3">
+      "Lorem ipsum dolor sit amet consectetur adipiscing, elit dignissim
+      interdum morbi sem, senectus pulvinar tortor a dis. Ad nulla et interdum
+      hendrerit mattis, ornare semper convallis vel primis vehicula, per mauris
+      volutpat tempor. Lacus ultrices sem nisi et dui in ad eget lacinia, montes
+      proin cubilia elementum fusce torquent lobortis. Magna et fermentum netus
+      montes per gravida quis turpis duis elementum, sociosqu pharetra luctus
+      tortor blandit metus tristique semper fringilla, ultricies vitae pulvinar
+      morbi molestie himenaeos rutrum tellus tempus. Nam eleifend posuere
+      aliquam neque mattis tellus viverra pretium eget consequat pellentesque
+      commodo tempus congue cursus, mus proin varius lectus primis vehicula sem
+      dictum ornare tempor lacus at magna. Facilisi fames volutpat nunc primis
+      ultrices litora bibendum, justo luctus natoque cubilia ac nulla vivamus,
+      dapibus quam risus facilisis est quis. "
+      <table>
+        <tr>
+          <td style="text-align: center">
+            <input type="button" value="Modo lectura" id="m_lectura3" />
+          </td>
+      </table>
+    </div>
+  </body>
+</html>

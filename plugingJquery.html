@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #menu{
+            width: 70px;
+            background-color: rgb(110,130,195);
+            padding: 20px 20px 0 20px;
+            position: absolute;
+            left: -92px;
+            z-index: 100;
+        }
+        #menu img{
+            margin-bottom: 20px;
+            border:1px solid rgb(0,0,0);
+        }
+        
+        h1{
+            text-align: center;
+        }
+        p{
+            margin-left: 150px;
+        }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-1.6.3.js" integrity="sha256-m6oQ4cVjDD3Nm7Rr8AkTzJSzhV1YyUWa6YSDOcVm6Xs=" crossorigin="anonymous"></script>
+    <!-- plungin jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script>
+       
+       $(document).ready(function() {
+          //creamos con hover que era al pasar el ratón por encima, con dos funciones anonimas 
+        $("#menu").hover(function(){
+                //1º salgan las imagenes al poner el ratón por encima, desplazamos la imaágen a la derecha con el left a 0px
+                //añadimos la función stop para que elimine la cola. para que al pasar el ratón varias veces no haga la misma funció  muchas veces y se bloquee
+                $(this).stop().animate({
+                    left:"0px"
+                    //tarda 0.5seg, añadimos una función del plugin easing
+                },500,"easeInSine");//termina animate
+                
+            },
+
+
+            function(){
+                //2º al quitar el ratón de encima de la imágen volvera a su estado inicial indicando con el animate, left -92px//añadimos funcion stop
+                $(this).stop().animate({
+                    left:"-92px"
+                    //tarda 1.5seg y añadimos una función del plugin easing que haga un efecto rebote
+                },1500,"easeOutBounce");//termina animate
+                
+            });
+
+        });//termina el ready
+    </script>
+</head>
+<body>
+    <div id="menu">
+        <img src="imgs/img1.jpg" width="70" height="70" alt="blue">
+        <img src="imgs/img2.jpg" width="70" height="70" alt="green">
+        <img src="imgs/img3.jpg" width="70" height="70" alt="orange">
+        <img src="imgs/img4.jpg" width="70" height="70" alt="purple">
+        <img src="imgs/coche.jpg"width="70" height="70" alt="red">
+        <img src="imgs/abrir.png"width="70" height="70" alt="yellow">
+    </div>
+    <h1>Menús deslizantes</h1>
+    <p>Pasa el ratón por encima de la pestaña de la izquierda</p>
+    
+</body>
+</html>

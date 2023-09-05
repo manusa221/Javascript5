@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<script src="https://code.jquery.com/jquery-1.6.3.js" integrity="sha256-m6oQ4cVjDD3Nm7Rr8AkTzJSzhV1YyUWa6YSDOcVm6Xs=" crossorigin="anonymous"></script>
+<script>
+
+	$(document).ready(function() {
+		//creó una variable y la convierto a imagen
+		var foto_nueva=new Image();
+		//le digo que la ruta será img1
+		foto_nueva.src="imgs/img1.jpg";
+		
+		   
+		$("#foto").hover(function(){
+			
+			$(this).attr("src",foto_nueva.src);
+			
+		},
+		function(){
+			
+			$(this).attr("src","imgs/imgs2/img1.jpg");
+			
+			
+		});	
+		
+    });
+
+
+</script>
+</head>
+
+<body>
+
+<img src="imgs/imgs2/img1.jpg" width="300" height="200" id="foto">
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+
+            document.getElementById("img1").addEventListener("mouseover",cambiar,false);
+            document.getElementById("img1").addEventListener("mouseout",restaurar,false);
+        });
+        //funcion que cambia la imagen al pasar el raón por encima. con el atributo attr
+        function cambiar(){
+
+            $("img").attr("src","imgs/img1.jpg" );
+        }
+         //funcion que cambia la imagen al sacar el raón de encima. con el atributo attr
+        
+         function restaurar(){
+
+        $("img").attr("src", "imgs/arbol.jpg" );
+        }
+    </script>
+</head>
+<body>
+    <img src="imgs/arbol.jpg" id="img1">
+    
+</body>

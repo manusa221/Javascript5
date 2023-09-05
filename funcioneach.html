@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        p{
+            font-size: 22px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-align: justify;
+        }
+        #links{
+            width: 20%;
+            margin-left: 45px;
+            border: dashed #0000FF 2px;
+            float: left;
+            padding-bottom: 200px;
+            padding-left: 20px;
+        }
+        #links h2{
+            text-align: center;
+        }
+        #ultimos{
+            width: 75%;
+            float: left;
+        }
+        li{
+            font-weight: bold;
+            font-size: 18px;
+        }
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+     <script>
+        $(document).ready(function(){
+            //para cada vinculo externo seleccionamos todos los enlaces que empiecen por https://
+           $("a[href^='https://']").each(function(){
+            //declaramos una variable, le decimos que para etiqueta https, rescate el href, y lo almacenamos en la variable
+            var linkExternos=$(this).attr("href");
+            //le decimos que la caja links añada una lista (.append)
+            $("#links").append("<li>" + linkExternos + "</li>");
+
+           });
+        });
+</script>
+
+</head>
+<body>
+
+    <h1>Utilizando la función each</h1>
+   
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. <a href="https://www.gmail.es"> Ir a Gmail </a>Doloribus cum, illo corporis ullam voluptates cumque corrupti 
+        sunt quis libero sed dicta quam maxime! Dolore, et exercitationem ex esse ipsa ad? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus dolorum culpa explicabo 
+        quam alias voluptate, obcaecati doloremque est ullam magni, dicta eius enim eligendi modi dolore saepe architecto. Ullam, vero.</p>
+    
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus cum, illo corporis ullam voluptates cumque corrupti 
+       sunt quis libero sed dicta quam maxime! Dolore, et exercitationem ex esse ipsa ad? Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae soluta aut quaerat, nihil cumque 
+       perferendis quia, eos obcaecati tempore iste ducimus quis in adipisci officiis saepe quod, minus iusto assumenda!</p>
+
+       <div id="ultimos"><p>Lorem ipsum dolor sit amet consectetur <a href="https://news.google.es/">Ir a google news</a> adipisicing elit. Non esse quas dicta dolorum vero quo,
+         officiis animi rem sed voluptate corrupti quos perspiciatis nam voluptas aliquid labore. Officia, eos cumque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta nemo
+          doloremque nesciunt sed molestiae nam vero consequatur molestias rerum, nisi perspiciatis, deleniti quibusdam minus facere, asperiores ratione ipsam expedita hic.</p>
+        
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad sit, placeat doloribus necessitatibus iure tempore adipisci rerum cum.
+            Quas dolore quo quia minima neque quae sunt eius iure, veritatis recusandae!</p>
+       
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci, molestias cumque! <a href="https://www.google.es/maps">Ir a mapa</a>Libero autem sed harum aut, 
+            consectetur minima ut asperiores? 
+            Atque cumque nesciunt numquam fuga officia itaque, recusandae nemo vitae.</p></div><div id="links"><h2>Links utilizados</h2></div>
+    
+</body>
+</html>

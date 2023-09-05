@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+   <style>
+        #anuncio{
+            background-color: #000;
+            color:#FFF;
+            font-size: 24px;
+        }
+    </style>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+   
+     <script>
+      $(document).ready (function() {
+  //llamamos al id anuncio le damos alto y ancho, ocultamos y pasados 10seg aparecera
+          $("#anuncio").width(500).height(500).text("¡VENDE!").hide().fadeIn(10000);
+          
+      });
+     </script>
+</head>
+<body>
+    <div id="anuncio">
+        ¡COMPRA!
+    </div>
+    
+    <!-- crear un cuadrado en script -->
+   <!--  - <script>
+        var anuncio=document.getElementById("anuncio");
+        anuncio.style.width="500px";
+        anuncio.style.height="500px";
+        anuncio.innerHTML="¡vende!";
+    </script>
+-->
+    
+</body>
+</html>

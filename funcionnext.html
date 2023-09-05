@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style type="text/css">
+        body{
+            background-color: blue;
+            color: #FFF;
+        }
+        h3{
+            background: url(imgs/abrir.png) no-repeat 0 11px;
+            padding: 20px 0 0 25px;
+            cursor: pointer;
+        }
+        h3.cerrar{
+            background-image: url(imgs/cerrar.png);
+        }
+        .respuesta{
+            margin-left: 25px;
+        }
+        .titulo{
+            text-align: center;
+        }
+        .principal{
+            margin-left: 100px;
+            margin-top: 150px;
+        }
+    </style>
+   <script src="https://code.jquery.com/jquery-1.6.3.js" integrity="sha256-m6oQ4cVjDD3Nm7Rr8AkTzJSzhV1YyUWa6YSDOcVm6Xs=" crossorigin="anonymous"></script>
+  
+  <script>
+    $(document).ready(function(){
+      
+        $(".respuesta").hide();
+        
+       
+        $(".principal h3").toggle(function(){
+          $(this).next(".respuesta").fadeIn();
+         $(this).addClass("cerrar");
+          
+        },function(){
+            $(this).next(".respuesta").fadeOut();
+            $(this).removeClass("cerrar");
+       });
+        
+    });
+   
+    
+    </script>
+
+
+</head>
+<body>
+    <div>
+        <p><img src="imgs/abrir.png" ></p>
+        <h1 class="titulo">Pildoras infórmaticas FAQ</h1>
+    </div>
+        <div class="principal">
+    <h2>Preguntas Frecuentes</h2>
+
+    <h3> ¿Qué programa utilizas para grabar los videos?</h3>
+        <div class="respuesta">
+        <p> Utilizo Cantasia versión 7 junto con el programa gratuito ZoomIt</p>
+    </div>
+
+    <h3>¿Qué programa utilizas para grabar los videos?</h3>
+    <div class="respuesta">
+       <p>Utilizo Cantasia versión 7 junto con el programa gratuito ZoomIt Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum fugiat at corrupti dolorum voluptates qui quam, ullam voluptate laboriosam voluptas, quas dolor aut cupiditate similique, repellendus molestiae fugit natus nesciunt.</p>
+</div>
+
+<h3>¿Qué programa utilizas para grabar los videos?</h3>
+<div class="respuesta">
+<p>Utilizo Cantasia versión 7 junto con el programa gratuito ZoomIt Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum fugiat at corrupti dolorum voluptates qui quam, ullam voluptate laboriosam voluptas, quas dolor aut cupiditate similique, repellendus molestiae fugit natus nesciunt.</p>
+</div>
+<h3>¿Qué programa utilizas para grabar los videos?</h3>
+<div class="respuesta">
+<p>Utilizo Cantasia versión 7 junto con el programa gratuito ZoomIt Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum fugiat at corrupti dolorum voluptates qui quam, ullam voluptate laboriosam voluptas, quas dolor aut cupiditate similique, repellendus molestiae fugit natus nesciunt.</p>
+</div>
+<h3>¿Qué programa utilizas para grabar los videos?</h3>
+<div class="respuesta">
+<p>Utilizo Cantasia versión 7 junto con el programa gratuito ZoomIt Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum fugiat at corrupti dolorum voluptates qui quam, ullam voluptate laboriosam voluptas, quas dolor aut cupiditate similique, repellendus molestiae fugit natus nesciunt.</p>
+</div>
+<h3>¿Qué programa utilizas para grabar los videos?</h3>
+<div class="respuesta">
+<p>Utilizo Cantasia versión 7 junto con el programa gratuito ZoomIt Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum fugiat at corrupti dolorum voluptates qui quam, ullam voluptate laboriosam voluptas, quas dolor aut cupiditate similique, repellendus molestiae fugit natus nesciunt.</p>
+</div>
+<h3>¿Qué programa utilizas para grabar los videos?</h3>
+<div class="respuesta">
+<p>Utilizo Cantasia versión 7 junto con el programa gratuito ZoomIt Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum fugiat at corrupti dolorum voluptates qui quam, ullam voluptate laboriosam voluptas, quas dolor aut cupiditate similique, repellendus molestiae fugit natus nesciunt.</p>
+</div>
+<h3>¿Qué programa utilizas para grabar los videos?</h3>
+<div class="respuesta">
+<p>Utilizo Cantasia versión 7 junto con el programa gratuito ZoomIt Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum fugiat at corrupti dolorum voluptates qui quam, ullam voluptate laboriosam voluptas, quas dolor aut cupiditate similique, repellendus molestiae fugit natus nesciunt.</p>
+</div>
+<h3>¿Qué programa utilizas para grabar los videos?</h3>
+<div class="respuesta">
+<p>Utilizo Cantasia versión 7 junto con el programa gratuito ZoomIt Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum fugiat at corrupti dolorum voluptates qui quam, ullam voluptate laboriosam voluptas, quas dolor aut cupiditate similique, repellendus molestiae fugit natus nesciunt.</p>
+</div>
+
+   
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <!-- importamos librería jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>">
+    <!-- creamos un script para que llame a la funcion, para que se ejecute despues de leer el html y le indicamos la ruta y lo que debe hacer. HA ESTO SE LLAMA LOOP AUTOMATICO -->
+    <script>
+        $(document).ready(function(){
+            $("#carrete img").hide();
+        });
+    </script>
+   
+</head>
+<body>
+    <div id="carretes">
+        <img src="imgs/img1.jpg" width="250" height="175">
+        &nbsp;
+        <img src="imgs/img2.jpg" width="250" height="175">
+        &nbsp;
+        <img src="imgs/img3.jpg" width="250" height="175">
+        &nbsp;
+        <img src="imgs/img4.jpg" width="250" height="175">
+    </div>
+
+</body>
+</html>

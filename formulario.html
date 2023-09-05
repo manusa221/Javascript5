@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+        //creamos una funcion para validar al usuario/ si no rellena nada saldra un mensaje que debe que rellenar el campo
+         function validar(){
+                var n_usuario=document.getElementById("usuario").value;
+                if(n_usuario==""){
+                    $("#usuario").after("Rellena este campo, por favor");
+                }
+            }
+    </script>
+
+</head>
+<body>
+    <form action="" method="get">
+
+        <input type="text" id="usuario"></br>
+        <input type="text" id="nombre"></br>
+        <input type="text" id="apellido"></br>
+        <input type="button" value="Dale" onclick="validar()">
+    </form>
+    
+</body>
+</html>

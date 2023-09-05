@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        body{
+            background-color: #334673;
+            color: #FFF;
+        }
+        #principal{
+            width: 60%;
+            margin: auto;
+        }
+        a{
+            color: #FFF;
+            font: bold 20px Verdana, Geneva, sans-serif;
+        }
+    </style>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
+     <script>
+        $(document).ready (function(){
+            //funcion anonima
+            //vamos hacer que al picar con el ratón en cualquier lado de la pág salga un alert, seleccionamos todo el html
+            $("html").dblclick(function(){
+
+                alert("cuidadooo");
+            });
+
+            //funcion anonima al pasar el raton por encima del link añada un texto debajo del formulario
+
+            $("a").mouseover(function(){
+                //creamos una variable
+                var mensaje="<p> Estás pasando el ratón por encima del link </p>";
+                //apuntamos donde queremos que lo agregue. agregamos el texto mensaje
+                $("#principal").append(mensaje)
+
+            });
+
+            //creamos una funcion anonima que al picar el boton cambie el texto del boton por otro
+
+            $("#el_boton").click(function(){
+                //apuntamos al boton(this) y con el comando val le cambiamos el valor por otro
+
+                $(this).val("Para de hacer click!!");
+
+            });
+
+            //funcion anonima que al seleccionar el campo de escribir salga un mensaje. focus es cuando un elemento ha sido seleccionado
+            $("#el_campo").focus(function(){
+
+                $(this).val("Ahora vas a escribir");
+
+            });
+
+
+
+        });
+     </script>
+</head>
+<body>
+    <div id="principal">
+    <h1>Introducción a eventos</h1>
+    <p><a href="#">Un link</a></p>
+    <form action="#" method="get">
+        <fieldset><legend>Formulario</legend><p>
+            <input name="button" type="button" id="el_boton" value="Un boton">
+        </p>
+    <p><input name="textfield" type="text" id="el_campo"></p></fieldset>
+    </form>
+</div>
+</body>
+</html>

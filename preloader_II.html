@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<style>
+
+table{
+	text-align:center;
+	width:50%;
+	border:none;
+	margin:auto;
+}
+
+img{
+	padding:0 5px;
+}
+h1{
+	text-align:center;
+}
+
+</style>
+<script src="https://code.jquery.com/jquery-1.6.3.js" integrity="sha256-m6oQ4cVjDD3Nm7Rr8AkTzJSzhV1YyUWa6YSDOcVm6Xs=" crossorigin="anonymous"></script>
+
+<script>
+
+	$(document).ready(function() {
+
+		//tenemos que almacenar 4 rutas en un array
+		var foto_hover=["imgs/img1.jpg",
+						"imgs/img2.jpg",
+						"imgs/img3.jpg",
+						"imgs/img4.jpg"];
+		
+		//creamos un array vacío
+		var imagenes=[];
+
+		for(var i=0;i<foto_hover.length;i++){
+			//el array imagenes lo convierto a una clase imagen
+			imagenes[i]=new Image();
+			//en el array imagenes almaceno la posición de cada ruta de foto_hover
+			imagenes[i].src=foto_hover[i];
+		}
+		
+	
+						
+		$("img").each(function() {
+			
+			$(this).hover(cambiar , restaurar);
+            
+        });
+        	
+	function cambiar(e){
+		//si estamos en la imagen1
+		if(e.target==img1){
+			//apuntamos a imágen1
+			$("#img1").attr("src",imagenes[0].src);
+		}else if(e.target==img2){
+			$("#img2").attr("src",imagenes[1].src);
+		}else if(e.target==img3){
+			$("#img3").attr("src",imagenes[2].src);
+		}else if(e.target==img4){
+			$("#img4").attr("src",imagenes[3].src);
+		}
+	
+	}
+	
+	function restaurar(e){
+		//dejamos las imágenes cómo están al principio
+		if(e.target==img1){
+			//apuntamos a imágen1
+			$("#img1").attr("src","imgs/imgs2/img1.jpg");
+		}else if(e.target==img2){
+			$("#img2").attr("src","imgs/imgs2/img2.jpg");
+		}else if(e.target==img3){
+			$("#img3").attr("src","imgs/imgs2/img3.jpg");
+		}else if(e.target==img4){
+			$("#img4").attr("src","imgs/imgs2/img4.jpg");
+		}
+	
+			
+	}
+  });
+</script>
+</head>
+
+<body>
+<h1>Galería de imágenes</h1>
+<table width="100%" border="0">
+  <tr>
+    <td><img src="imgs/imgs2/img1.jpg" id="img1" ></td>
+    <td><img src="imgs/imgs2/img2.jpg" id="img2" ></td>
+    <td><img src="imgs/imgs2/img3.jpg" id="img3" ></td>
+    <td><img src="imgs/imgs2/img4.jpg" id="img4" ></td>
+  </tr>
+</table>
+</body>
+</html>

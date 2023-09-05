@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            /*opacity:0.5; */
+        }
+        
+    </style>
+    <script src="https://code.jquery.com/jquery-1.6.3.js" integrity="sha256-m6oQ4cVjDD3Nm7Rr8AkTzJSzhV1YyUWa6YSDOcVm6Xs=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            //indicamos que la imagen al pulsar con un click, creamos una función anonima
+            $("#imagen").click(function(){
+                //le decimos que donde a pulsado, haga una animación
+                $(this).animate(
+                    {
+                        //indicamos lo que debe hacer con una clase css. desplazara a la izquierda 150px
+                        marginLeft:"+=150px"
+                    },1000);//duración 1 seg
+                
+            });
+
+
+
+        });
+        </script>
+</head>
+
+<body>
+    <img src="imgs/coche.jpg" width="300" height="200" id="imagen">
+    
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .micontenedor{
+            background-color: red;
+        }
+    </style>
+    <!-- añadimos librería jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    
+    <script>
+        $(document).ready(function(){
+            //aqui conseguimos que en la pag salga un cuadro de alarma mostrando la etiqueta <h2>errores</h2>
+           // alert($("#errores h2").html());
+            //reemplazar texto
+           // $("#contenedor h2").text("Hola");
+           //añadir etiqueta
+           $("#errores").append("<p>Hay errores en el formulario</p>");
+        });
+    </script>
+   
+   
+
+
+</head>
+<body>
+    <div id="contenedor">
+        <div id="errores" class="micontenedor">
+            <h2>Errores</h2>
+        </div>
+    </div>
+    
+</body>
+</html>
